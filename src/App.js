@@ -1,23 +1,45 @@
 import logo from './logo.svg';
 import './App.css';
+import Title from './components/Title';
+import Button from './components/Button/Button';
+import InputBox from './components/InputBox/InputBox';
+import Output from './components/Output/Output';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Title title="React Calculator" />
+      <InputBox />
+      <Output />
+      <div>
+      <Button name="7" />
+      <Button name="8" />
+      <Button name="9" />
+        <Button name="+" />
+      </div>
+
+      <div>
+      <Button name="4" />
+      <Button name="5" />
+      <Button name="6" />
+        <Button name="-" />
+      </div>
+
+      <div>
+      <Button name="1" />
+      <Button name="2" />
+      <Button name="3" />
+        <Button name="*" />
+      </div>
+
+      <div>
+      <Button name="C" />
+      <Button name="0" />
+      <Button name="=" />
+        <Button name="/" />
+      </div>
+      
     </div>
   );
 }
