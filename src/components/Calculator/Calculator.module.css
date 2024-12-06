@@ -5,3 +5,17 @@
   border-radius: 7px;
   cursor: pointer;
 }
+
+.output{
+  margin:30px;
+}
+.subContaier{
+  marginTop:100px;
+  background-color: aqua;
+}
+
+.input{
+  width:20%;
+  height:5%px;
+  margin: 20px;
+}

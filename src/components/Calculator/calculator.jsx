@@ -14,7 +14,7 @@ const Calculator = () => {
       setOutput("");
     }
     else if (value==="=") {
-      setInput("") 
+      //setInput("") 
       calculateOutput()
     }
     else {
@@ -36,35 +36,36 @@ const Calculator = () => {
   
   return (
     <div>
-      <input value={ input} />
-      <h2>{output}</h2>
-      <div>
+      <input type="text" className={styles.input}  value={ input} />
+      <div >{output}</div>
+      
+      <div className={styles.subContainer}>
       <div >
-        <button onClick={() => handleClick("7")} className={styles.button}>7</button>
-        <button onClick={() => handleClick("8")} className={styles.button}>8</button>
-        <button onClick={() => handleClick("9")} className={styles.button}>9</button>
-        <button onClick={()=>handleClick("+")} className={styles.button}>+</button>
+        <button onClick={() => handleClick("7")} className={styles.button} value="7">7</button>
+        <button onClick={() => handleClick("8")} className={styles.button} value="8">8</button>
+        <button onClick={() => handleClick("9")} className={styles.button} value="9">9</button>
+        <button onClick={()=>handleClick("+")} className={styles.button} value="+">+</button>
       </div>
 
       <div >
-        <button onClick={() => handleClick("4")} className={styles.button}>4</button>
-        <button onClick={() => handleClick("5")} className={styles.button}>5</button>
-        <button onClick={() => handleClick("6")} className={styles.button}>6</button>
-        <button onClick={()=>handleClick("-")} className={styles.button}>-</button>
+        <button onClick={() => handleClick("4")} className={styles.button} value="4">4</button>
+        <button onClick={() => handleClick("5")} className={styles.button} value="5">5</button>
+        <button onClick={() => handleClick("6")} className={styles.button}value="6">6</button>
+        <button onClick={()=>handleClick("-")} className={styles.button} value="-">-</button>
       </div>
 
       <div >
-        <button onClick={() => handleClick("1")} className={styles.button}>1</button>
-        <button onClick={() => handleClick("2")} className={styles.button}>2</button>
-        <button onClick={() => handleClick("3")} className={styles.button}>3</button>
-        <button onClick={()=>handleClick("*")} className={styles.button}>*</button>
+        <button onClick={() => handleClick("1")} className={styles.button} value="7">1</button>
+        <button onClick={() => handleClick("2")} className={styles.button} value="2">2</button>
+        <button onClick={() => handleClick("3")} className={styles.button} value="3">3</button>
+        <button onClick={()=>handleClick("*")} className={styles.button} value="*">*</button>
       </div>
 
       <div >
-        <button onClick={() => handleClick("C")} className={styles.button}>C</button>
-        <button onClick={() => handleClick("0")} className={styles.button}>0</button>
-        <button onClick={() => handleClick("=")} className={styles.button}>=</button>
-        <button onClick={()=>handleClick("/")} className={styles.button}>/</button>
+        <button onClick={() => handleClick("C")} className={styles.button} value="C">C</button>
+        <button onClick={() => handleClick("0")} className={styles.button} value="0">0</button>
+        <button onClick={() => handleClick("=")} className={styles.button} value="=">=</button>
+        <button onClick={()=>handleClick("/")} className={styles.button} value="/">/</button>
       </div>
       </div>
       </div>
