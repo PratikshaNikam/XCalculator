@@ -28,9 +28,20 @@ const Calculator = () => {
   }
   
   const calculateOutput = () => {
-    try {setOutput(eval(input)) }
-    catch (error) {
-      alert("Enter valid data")
+    if (input === "0/0") {
+      setOutput(NaN)
+    }
+    else if (input.includes("/0")) {
+      setOutput("Infinity")
+    }
+    else if (input === "") {
+      setOutput("Error")
+    }
+    else {
+      try { setOutput(eval(input)) }
+      catch (error) {
+        alert("Enter valid data")
+      }
     }
   }
   
